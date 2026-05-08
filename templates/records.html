@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Records</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2 style="text-align:center;">📚 Saved Records</h2>
+
+<table>
+<tr>
+    <th>ID</th>
+    <th>User</th>
+    <th>Measured</th>
+    <th>Real</th>
+    <th>Action</th>
+</tr>
+
+{% for r in records %}
+<tr>
+    <td>{{ r[0] }}</td>
+    <td>{{ r[1] }}</td>
+    <td>{{ r[2] }}</td>
+    <td>{{ r[3] }}</td>
+    <td>
+        <a class="delete-btn" href="/delete/{{ r[0] }}">Delete</a>
+    </td>
+</tr>
+{% endfor %}
+</table>
+
+<a href="/">⬅ Back to Calculator</a>
+
+</body>
+</html>

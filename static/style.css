@@ -1,0 +1,99 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdf6ec; /* cream */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    width: 400px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Title */
+h2 {
+    text-align: center;
+    color: #1e3a8a; /* deep blue */
+}
+
+/* Inputs & Selects */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2563eb; /* blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1e40af;
+}
+
+/* Result Box */
+.result {
+    background: #eff6ff;
+    padding: 10px;
+    margin-top: 15px;
+    border-left: 5px solid #2563eb;
+    font-weight: bold;
+}
+
+/* Links */
+a {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Table Styling */
+table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: white;
+}
+
+th {
+    background-color: #2563eb;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+/* Delete button link */
+.delete-btn {
+    color: red;
+    font-weight: bold;
+}

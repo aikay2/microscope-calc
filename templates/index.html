@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Microscope Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>🔬 Microscope Calculator</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="text" name="username" placeholder="Username" required>
+
+        <input type="number" step="any" name="measured" placeholder="Measured Size" required>
+
+        <label>Microscope Type</label>
+        <select name="microscope">
+            {% for m in microscopes %}
+            <option value="{{m}}">{{m}}</option>
+            {% endfor %}
+        </select>
+
+        <label>Output Unit</label>
+        <select name="unit">
+            {% for u in units %}
+            <option value="{{u}}">{{u}}</option>
+            {% endfor %}
+        </select>
+
+        <label>Upload Image (optional)</label>
+        <input type="file" name="image">
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if result %}
+    <div class="result">
+        Result: {{ result }}
+    </div>
+    {% endif %}
+
+    <a href="/records">📚 View Records</a>
+</div>
+
+</body>
+</html>
